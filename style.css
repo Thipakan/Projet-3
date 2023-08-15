@@ -1,0 +1,49 @@
+*{
+    max-width: 400px;
+    max-height: 1000px;
+    overflow-x: clip;
+}
+
+.localisation{
+    background-color: rgb(217, 212, 212);
+}
+
+.listerestaurants{
+    background-color: gainsboro;
+}
+
+.etapes{
+    background-color: gainsboro;
+    border-radius: 20px;
+    height: 50px;
+}
+
+
+
+
+.bouttonrestaurants {
+    border: 0;
+    line-height: 2.5;
+    padding: 0 20px;
+    font-size: 1rem;
+    text-align: center;
+    color: #fff;
+    text-shadow: 1px 1px 1px #000;
+    border-radius: 20px;
+    background-color: rgb(194, 0, 220);
+    background-image: linear-gradient(to top left, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) 30%, rgba(0, 0, 0, 0));
+    box-shadow:
+      inset 2px 2px 3px rgba(255, 255, 255, 0.6),
+      inset -2px -2px 3px rgba(0, 0, 0, 0.6);
+  }
+  
+  .bouttonrestaurants:hover {
+    background-color: rgb(194, 0, 220);
+  }
+  
+  .bouttonrestaurants:active {
+    box-shadow:
+      inset -2px -2px 3px rgba(255, 255, 255, 0.6),
+      inset 2px 2px 3px rgba(0, 0, 0, 0.6);
+  }
+  
