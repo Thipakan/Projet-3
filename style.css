@@ -4,12 +4,27 @@
     overflow-x: clip;
 }
 
+h4{
+     margin-left: 100px;
+}
+
+.logoOhmyfood{
+    width: 300px;
+    height: 40px ;
+}
+
+img{
+    width: 300px;
+    height: 150px ;
+}
+
 .localisation{
     background-color: rgb(217, 212, 212);
 }
 
 .listerestaurants{
     background-color: gainsboro;
+    height: 250px;
 }
 
 .etapes{
@@ -18,10 +33,37 @@
     height: 50px;
 }
 
+.LesRestaurants{
+    /*display: flex;
+    flex-direction: column;*/
+    height: 1300px;
+    background-color: gainsboro;
+}
+
+.exemplerestaurant{
+    display: flex;
+    flex-direction: column;
+    margin-left: 50px;
+    margin-top: 30px;
+    background-color: white;
+    height: 225px;
+    width: 300px;
+    border-radius: 15px ;
+}
+
+.nomduresto{
+    margin-left: 20px;
+}
+
+.nomduplat{
+     margin-left: 20px;
+     margin-top: -5px;
+}
 
 
 
 .bouttonrestaurants {
+    margin-left: 75px;
     border: 0;
     line-height: 2.5;
     padding: 0 20px;
@@ -46,4 +88,15 @@
       inset -2px -2px 3px rgba(255, 255, 255, 0.6),
       inset 2px 2px 3px rgba(0, 0, 0, 0.6);
   }
-  
+
+
+  .monfooter{
+    margin-top: 600px;
+    /*margin-left: 50px;*/
+    background-color: #291f1f;
+  }
+
+  .textefin{
+    color: white;
+    margin-left: 30px;
+  }
