@@ -1,6 +1,6 @@
 *{
     max-width: 400px;
-    max-height: 1000px;
+    max-height: 2000px;
     overflow-x: clip;
 }
 
@@ -9,8 +9,9 @@ h4{
 }
 
 .logoOhmyfood{
-    width: 300px;
-    height: 40px ;
+    width: 200px;
+    height: 30px ;
+    margin-left: 80px;
 }
 
 img{
@@ -36,7 +37,7 @@ img{
 .LesRestaurants{
     /*display: flex;
     flex-direction: column;*/
-    height: 1300px;
+    height: 1100px;
     background-color: gainsboro;
 }
 
@@ -60,6 +61,31 @@ img{
      margin-top: -5px;
 }
 
+.resto__coeur {
+    display: flex;
+    /*position: absolute;
+    bottom: 25px;
+    right: 20px;*/
+    font-size: 1.6em;
+    margin-top: -50px;
+    margin-left: 270px;
+
+}
+
+.resto__coeur--plein {
+    opacity: 0;
+    background: linear-gradient(#9356DC, #FF79DA);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    transform: skewX(60deg);
+    transition: 0.5s ease-in-out;
+}
+
+.resto__coeur--plein:active {
+    opacity: 1;
+    transform: skewX(0deg);
+}
 
 
 .bouttonrestaurants {
@@ -90,9 +116,12 @@ img{
   }
 
 
+
+
   .monfooter{
-    margin-top: 600px;
+    /*margin-top: 300px;*/
     /*margin-left: 50px;*/
+    margin-top: -16px;
     background-color: #291f1f;
   }
 
