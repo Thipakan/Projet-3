@@ -20,7 +20,25 @@ img{
 }
 
 .localisation{
-    background-color: rgb(217, 212, 212);
+    background-color: #d9d4d4;
+    margin-bottom: -20px;
+    height: 50px;
+    text-align: center;
+}
+
+.search__dot {
+  /*margin-top: 15px;
+  padding-right: 3%;*/
+  margin-left: -300px;
+}
+
+.texte1{
+    margin-left: 100px;
+}
+
+.texte2{
+    margin-left: 100px;
+    margin-top: 20px;
 }
 
 .listerestaurants{
