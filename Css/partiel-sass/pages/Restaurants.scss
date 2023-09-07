@@ -1,0 +1,290 @@
+.background {
+    background-color: $backgroundBox;
+    overflow: hidden;
+
+    @include desktopPortable {
+        background-color: white;
+    }
+
+    @include desktop {
+        background-color: white;
+    }
+}
+
+.imgFond {
+    width: 100%;
+
+    &--taille {
+        margin: -81px 0 -92px 0;
+
+        @include tablette {
+            height: 700px;
+        }
+    }
+
+    @include desktopPortable {
+        width: 30%;
+        float: right;
+        clear: both;
+        margin: 0 3% 0 5%;
+        border-radius: 20px;
+        border: solid 5px $colorTertiary;
+        padding: 10px;
+
+        &--taille {
+            width: 20%;
+        }
+
+    }
+
+    @include desktop {
+        width: 30%;
+        float: right;
+        clear: both;
+        margin: 0 3% 0 5%;
+        border-radius: 20px;
+        border: solid 5px $colorTertiary;
+        padding: 10px;
+
+        &--taille {
+            width: 20%;
+        }
+    }
+}
+
+.menu {
+    position: relative;
+    bottom: 45px;
+    background-color: $backgroundBox;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+    padding: 0 5% 0 5%;
+
+    &__head {
+        display: flex;
+        align-items: center;
+
+        @include tablette {
+            justify-content: center;
+        }
+
+        @include desktopPortable {
+            width: 40%;
+            padding-bottom: 20%;
+        }
+
+        @include desktop {
+            width: 40%;
+            padding-bottom: 20%;
+        }
+    }
+
+    &__coeur {
+        display: flex;
+        position: absolute;
+        right: 40px;
+        font-size: 1.6em;
+        cursor: pointer;
+
+        &--plein {
+            opacity: 0;
+            background: linear-gradient($colorPrimary, $colorSecondary);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            transform: skewX(60deg);
+            transition: 0.5s ease-in-out;
+
+            &:hover {
+                opacity: 1;
+                transform: skewX(0deg);
+            }
+        }
+
+        @include tablette {
+            right: 10%;
+        }
+
+        @include desktopPortable {
+            right: 60%;
+
+        }
+
+        @include desktop {
+            right: 70%;
+        }
+    }
+
+    @include desktopPortable {
+        background-color: white;
+        position: static;
+    }
+
+    @include desktop {
+        background-color: white;
+        position: static;
+    }
+}
+
+.boxMenu {
+    display: flex;
+    flex-wrap: wrap;
+
+    @include desktopPortable {
+        gap: 40px;
+        height: 300px;
+        justify-content: space-around;
+    }
+
+    @include desktop {
+        gap: 40px;
+        height: 300px;
+        justify-content: space-around;
+    }
+}
+
+span {
+    text-decoration: underline $colorTertiary 3px;
+    text-underline-offset: 7px;
+}
+
+.entrees {
+    width: 95%;
+
+    @include desktopPortable {
+        width: 30%;
+        @include layoutMenu;
+    }
+
+    @include desktop {
+        width: 30%;
+        @include layoutMenu;
+    }
+}
+
+.plats {
+    width: 95%;
+    animation: visibilities 1.5s ease-in-out forwards;
+
+    @include desktopPortable {
+        width: 30%;
+        @include layoutMenu;
+    }
+
+    @include desktop {
+        width: 30%;
+        @include layoutMenu;
+    }
+}
+
+.desserts {
+    width: 95%;
+    animation: visibilities 1s 1.3s ease-in-out both;
+
+    @include desktopPortable {
+        width: 30%;
+        @include layoutMenu;
+    }
+
+    @include desktop {
+        width: 30%;
+        @include layoutMenu;
+    }
+}
+
+.menuCarte {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 20px;
+    border-radius: 15px;
+    margin-bottom: 15px;
+    animation: translateCard 1s forwards;
+
+    @for $translateCard from 1 through 10 {
+        &--#{$translateCard} {
+            visibility: hidden;
+            animation-delay: 0.3s *$translateCard;
+        }
+    }
+
+    &__body {
+        width: 80%;
+        padding-left: 12px;
+        line-height: 17px;
+        cursor: pointer;
+        transition: width 1s ease-in-out;
+
+        p {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+    }
+    &:hover &__body{
+        width: 66%;
+    }
+
+    &__price {
+        max-width: 30%;
+        height: 100%;
+        display: flex;
+        cursor: pointer;
+    }
+
+    &__text--gras {
+        padding-top: 35px;
+        padding-right: 20px;
+        
+    }
+    
+    &__check {
+        height: 100%;
+        width: 0px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: transparent;
+        background-color: $colorTertiary;
+        border-radius: 0 15px 15px 0;
+        transition: width 1s ease-in-out;
+    }
+
+    &:hover &__check {
+        width: 60px;
+        color: white;
+    }
+
+    &:hover i {
+        transform: rotate(90deg);
+        animation: checkRotate 0.5s 0.5s forwards;
+    }
+}
+
+.commande {
+    background-color: $backgroundBox;
+    position: relative;
+    bottom: 20px;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 40px;
+
+    @include desktopPortable {
+        width: 20%;
+        background-color: white;
+        bottom: 500px;
+        left: 444px;
+
+    }
+
+    @include desktop {
+        width: 20%;
+        background-color: white;
+        bottom: 500px;
+        left: 444px;
+    }
+}

@@ -1,0 +1,176 @@
+@font-face {
+    font-family:'Roboto';
+    src: url('Roboto-Medium.ttf');
+}
+@font-face {
+    font-family:'RobotoLight';
+    src: url('Roboto-Light.ttf');
+}
+@font-face {
+    font-family:'Shrikhand';
+    src: url('Shrikhand-Regular.ttf');
+}
+
+.robotoStyle{
+    font-family: $policeStandard, Verdana, sans-serif;
+    font-weight: bold;
+}
+
+h2{
+    font-family: $policeTitre,Verdana, sans-serif;
+    @include tablette{
+        text-align: center;
+    }
+    
+}
+
+h3{
+    font-family: $policeTitre, Verdana, sans-serif;
+    font-weight: lighter;
+    padding-left: 5%;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    margin : 0;
+}
+
+body{
+    font-family: $policeStandard,Verdana, sans-serif;
+    font-weight: lighter;
+    margin: 0;
+}
+a{
+    color: black;
+    text-decoration: none;
+}
+
+.aFooter{
+    color: white;
+}
+a:visited{
+    color: black;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+#présentation{
+    background-color: $backgroundBox;
+}
+
+#fonctionnement{
+    padding: 5% 5% 3% 5%;
+}
+
+#restaurant{
+    padding: 0 5% 15% 5%;
+    background-color: $backgroundBox;
+    @include tablette{
+        padding: 0 5% 5% 5%;
+    }
+    @include desktopPortable{
+        padding: 0 5% 3% 5%;
+    }
+    @include desktop{
+        padding: 0 5% 3% 5%;
+    }
+}
+.headerImg {
+    font-family: $policeTitre;
+    font-size: 2em;
+    margin: 0;
+
+    @include tablette{
+        font-size: 3.5em;
+    }
+    @include desktopPortable{
+        display: none;
+    }
+    @include desktop{
+        display: none;
+    }
+}
+
+.txt{
+    text-align: center;
+    &--gras{
+        margin-bottom: 0;
+        font-size: 1.7em;
+        font-weight: bold;
+    }
+    &--light{
+        font-family: $policeLight;
+        font-size: 1em;
+        @include tablette{
+            margin-top: 1%;
+        }
+        @include desktopPortable{
+            margin-top: 3%;
+        }
+        @include desktop{
+            margin-top: 3%;
+        }
+    }
+    @include tablette{
+        text-align: center;
+    }
+    @include desktopPortable{
+        text-align: center;
+    }
+    @include desktop{
+        text-align: center;
+    }
+}
+
+.resto__txt{
+        font-family: $policeLight;
+    &--gras{
+        font-family: $policeStandard;
+        font-weight: bold;
+        font-size: 1.1em;
+    }
+}
+
+.menu__title{
+    font-weight: lighter;
+    @include tablette{
+        font-size: 2.5em;
+    }
+    @include desktopPortable{
+        font-size: 2.5em;
+    }
+    @include desktop{
+        font-size: 2.5em;
+    }
+}
+
+.light{
+    font-family: $policeLight;
+}
+
+.menuCarte__text{
+    font-family: $policeLight;
+    font-size: 0.9em;
+    margin: 0;
+    padding-bottom: 5px;
+    text-overflow: ellipsis;
+    &--gras{
+        font-family: $policeStandard;
+        font-weight: bold;
+    }
+    &--gras1{
+        font-family: $policeStandard;
+        font-weight: bold;
+        padding-top: 10px;
+        font-size: 1em;
+    }
+}
+footer{
+    color: white;
+}
+
+footer a{
+    color: white;
+}
+
+

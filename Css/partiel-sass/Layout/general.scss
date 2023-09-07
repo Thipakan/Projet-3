@@ -1,0 +1,97 @@
+body {
+    max-width: 100%;
+}
+
+header {
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 5%;
+    margin-bottom: 3%;
+
+    @include desktopPortable {
+        padding-top: 2%;
+    }
+
+    @include desktop {
+        padding-top: 2%;
+    }
+}
+
+.hiddenArrow {
+    visibility: hidden;
+}
+
+header a {
+    position: absolute;
+    left: 12px;
+    padding-left: 3%;
+    @include tablette{
+        font-size: 1.5em;
+    }
+
+    @include desktopPortable {
+        display: none;
+    }
+
+    @include desktop {
+        display: none;
+    }
+}
+
+.logo {
+    display: flex;
+    justify-content: flex-start;
+    display: none;
+    padding: 0;
+
+    @include tablette {
+        display: none;
+    }
+
+    @include desktopPortable {
+        position: static;
+        display: block;
+    }
+
+    @include desktop {
+        position: static;
+        display: block;
+    }
+}
+
+footer {
+    width: 100%;
+    height: auto;
+    background-color: $backgroundFooter;
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 5%;
+    padding-bottom: 4%;
+    margin: 0;
+
+    @include tablette {
+        display: flex;
+    }
+
+    @include desktopPortable {
+        display: flex
+    }
+
+    @include desktop {
+        display: flex;
+    }
+}
+
+footer li {
+    padding-top: 3%;
+    padding-right: 3%;
+}
+
+.iconeFoot {
+    padding-right: 8px;
+}

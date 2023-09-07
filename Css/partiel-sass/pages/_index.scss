@@ -1,0 +1,288 @@
+.loader{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(5px);
+    animation: loader 3s forwards;
+    &__box{
+        position: relative;
+    }
+    &__icones{
+        position: absolute;
+        bottom: 30px;
+        left: 35px;
+        font-size: 5em;
+        @include DegradeBouton;
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+        animation: pulse 1s ease-in-out forwards infinite;
+    }
+    &__circle{
+        width: 150px;
+        height: 150px;
+        border: solid 10px $colorPrimary;
+        border-top: solid 10px $colorTertiary;
+        border-radius: 75px;
+        animation: loaderRotate 1.5s ease-in-out infinite;
+    }
+}
+
+.search {
+    display: flex;
+    justify-content: center;
+    background-color: $backgroundBar;
+    box-shadow: inset 0 3px 3px 0 lightgrey;
+    padding-right: 35px;
+
+    &__dot {
+        margin-top: 15px;
+        padding-right: 3%;
+    }
+    @include tablette{
+        padding: 0;
+    }
+
+    @include desktopPortable {
+        width: 30%;
+        margin-left: 35%;
+        padding: 0;
+    }
+
+    @include desktop {
+        width: 30%;
+        margin-left: 35%;
+        padding: 0;
+    }
+}
+
+.boxPresentation {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 7% 50px 7%;
+    @include tablette{
+        justify-content: space-around;
+    }
+}
+
+nav {
+    padding-top: 12px;
+    @include tablette {
+        padding-left: 2.5%;
+    }
+
+    @include desktopPortable {
+        padding-left: 7%;
+    }
+
+    @include desktop {
+        padding-left: 7%;
+    }
+}
+
+.etapes {
+    padding-left: 3%;
+    &__etp {
+        display: flex;
+        align-items: center;
+        background-color: $backgroundBox;
+        gap: 20px;
+        height: 65px;
+        margin-bottom: 20px;
+        border-radius: 15px;
+        box-shadow: 0px 5px 10px $backgroundBar;
+
+        @include tablette {
+            width: 40%;
+        }
+
+        @include desktopPortable {
+            width: 20%;
+            margin-right: 4%;
+        }
+
+        @include desktop {
+            width: 20%;
+            margin-right: 4%;
+        }
+    }
+
+    &__num {
+        width: 22px;
+        height: 22px;
+        background-color: $colorPrimary;
+        display: flex;
+        justify-content: center;
+        padding-top: 2px;
+        border-radius: 10px;
+        color: white;
+        position: relative;
+        right: 10px;
+    }
+
+    &__icone {
+        color: $fonctionIcone;
+    }
+
+    &__etp:hover {
+        background-color: lighten($colorPrimary, 35%);
+    }
+
+    &__etp:hover .etapes__icone {
+        color: $colorPrimary;
+    }
+
+    @include tablette {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    @include desktopPortable {
+        display: flex;
+    }
+
+    @include desktop {
+        display: flex;
+    }
+}
+
+.robotoStyle {
+    &--top {
+        padding-top: 50px;
+    }
+}
+
+
+.resto {
+    width: 100%;
+
+    & .boxResto {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+
+        @include tablette {
+            justify-content: center;
+        }
+
+        @include desktopPortable {
+            flex-wrap: nowrap;
+            padding-left: 3%;
+            padding-right: 3%;
+            padding-bottom: 3%;
+        }
+
+        @include desktop {
+            flex-wrap: nowrap;
+            padding-left: 3%;
+            padding-right: 3%;
+            padding-bottom: 3%;
+        }
+    }
+
+    &__card {
+        width: 100%;
+        height: 220px;
+        overflow: hidden;
+        border-radius: 15px;
+        position: relative;
+        margin: auto;
+        box-shadow: 0px 5px 10px $backgroundBar;
+
+        @include tablette {
+            width: 40%;
+            margin: 0;
+        }
+
+        @include desktopPortable {
+            width: 20%;
+            margin: 0;
+        }
+
+        @include desktop {
+            width: 23%;
+            margin: 0;
+        }
+    }
+
+    &__img {
+        width: 100%;
+        height: 200px;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+        object-fit: cover;
+        background-color: white;
+        margin: -45px 0 0 0;
+    }
+
+    &__new {
+        background-color: $colorTertiary;
+        width: 90px;
+        height: 30px;
+        padding-top: 7px;
+        text-align: center;
+        border-radius: 2px;
+        color: darken($colorTertiary, 40%);
+        position: absolute;
+        top: 15px;
+        right: 15px;
+    }
+
+    &__txt {
+        margin: 0;
+        padding-top: 5px;
+        padding-left: 2%;
+
+    }
+
+    &__title {
+        width: 100%;
+        position: absolute;
+        bottom: 0px;
+        background-color: white;
+        padding-bottom: 15px;
+    }
+
+    &__coeur {
+        display: flex;
+        position: absolute;
+        bottom: 25px;
+        right: 20px;
+        font-size: 1.6em;
+
+        &--plein {
+            opacity: 0;
+            background: linear-gradient($colorPrimary, $colorSecondary);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            transform: skewX(60deg);
+            transition: 0.5s ease-in-out;
+
+            &:active {
+                opacity: 1;
+                transform: skewX(0deg);
+            }
+            @include desktopPortable{
+                &:hover {
+                    opacity: 1;
+                    transform: skewX(0deg);
+                }
+            }
+            @include desktop{
+                &:hover {
+                    opacity: 1;
+                    transform: skewX(0deg);
+                }  
+            }
+        }
+    }
+
+}

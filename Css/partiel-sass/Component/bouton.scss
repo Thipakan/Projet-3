@@ -1,0 +1,19 @@
+.btn {
+        @include bouton;
+        @include DegradeBouton;
+        @include desktopPortable{
+                &:hover{
+                        background: $colorTertiary;
+                        color: black;
+                        animation: pulse 1.5s ease-in-out infinite;
+                }
+        }
+        @include desktop{
+                &:hover{
+                        background: $colorTertiary;
+                        color: black;
+                        animation: pulse 1.5s ease-in-out infinite;
+                }
+
+        }
+}
