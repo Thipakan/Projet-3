@@ -1,35 +1,183 @@
-<!doctype html>
+
+<!DOCTYPE html>
 <html lang="fr">
+
 <head>
-  <meta charset="utf-8">
-  <title>Titre de la page</title>
-  <link rel="stylesheet" href="normalize.css" />
-  <link rel="stylesheet" href="style.css"/>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title> OhMyFood ! La palette du goût </title>
+    <link rel="stylesheet" href="normalize.css" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://kit.fontawesome.com/7a914944f6.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
     <header>
-        <img
-          class="logoOhmyfood"
-          src="C:/Users/thipa/Desktop/Projet 3/images/logo/ohmyfood.png"
-          alt="Ohmyfood"
-        />
-      </header>
+        <a href="index.html"><i class="fa-solid fa-arrow-left"></i></a>
+        <p class="headerImg">Ohmyfood</p>
+        <a class=" logo" href="index.html"><img src="C:/Users/thipa/Desktop/Projet 3/images/logo/ohmyfood.png" alt="Logo Oh my food" /></a>
+    </header>
+    <div class="BlocPage">
+        <main>
+            <section class="background">
+                <img class="imgFond" src="C:/Users/thipa/Desktop/Projet 3/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
+                    alt=" Restaurant La palette du gout" />
+                <div class="menu">
+                    <div class="menu__head">
+                        <h2 class="menu__title">La palette du goût</h2>
+                        <div class="menu__coeur"><i class="fa-regular fa-heart"></i></div>
+                        <div class="menu__coeur menu__coeur--plein"><i class="fa-solid fa-heart"></i></div>
+                    </div>
+
+                    <div class="boxMenu">
+
+                        <div class="entrees">
+                            <p class="light"><span>ENTR</span>ÉES</p>
+                            <!-- entrées 1 -->
+                            <div class="menuCarte menuCarte--1">
+                                <div class="menuCarte__body">
+                                    <p class="menuCarte__text menuCarte__text--gras1">Fricassé d'escargot</p>
+                                    <p class="menuCarte__text">Au piment d'Espelette</p>
+                                </div>
+                                <div class="menuCarte__price">
+                                    <p class="menuCarte__text menuCarte__text--gras">25€</p>
+                                    <div class="menuCarte__check"><i class="fa-solid fa-circle-check"></i></div>
+                                </div>
+                            </div>
+
+                            <!-- entrée 2 -->
+                            <div class="menuCarte menuCarte--2">
+                                <div class="menuCarte__body">
+                                    <p class="menuCarte__text menuCarte__text--gras1">Foie gras de canard mi-cuit</p>
+                                    <p class="menuCarte__text">Et ses copeaux de truffe noire</p>
+                                </div>
+                                <div class="menuCarte__price">
+                                    <p class="menuCarte__text menuCarte__text--gras">35€</p>
+                                    <div class="menuCarte__check"><i class="fa-solid fa-circle-check"></i></div>
+                                </div>
+                            </div>
+
+                            <!-- entrée 3 -->
+                            <div class="menuCarte menuCarte--3">
+                                <div class="menuCarte__body">
+                                    <p class="menuCarte__text menuCarte__text--gras1">Oeuf au plat</p>
+                                    <p class="menuCarte__text">Assaisonné à la truffe sur lit de caviar</p>
+                                </div>
+                                <div class="menuCarte__price">
+                                    <p class="menuCarte__text menuCarte__text--gras">20€</p>
+                                    <div class="menuCarte__check"><i class="fa-solid fa-circle-check"></i></div>
+                                </div>
+                            </div>
+                        </div>
 
 
-    
+                        <div class="plats">
+                            <p class="light"><span>PLAT</span>S</p>
+                            <!-- plat 1 -->
+                            <div class="menuCarte menuCarte--4">
+                                <div class="menuCarte__body">
+                                    <p class="menuCarte__text menuCarte__text--gras1">Filet de boeuf aux herbes</p>
+                                    <p class="menuCarte__text">Accompagné de sa ribambelle de légumes</p>
+                                </div>
+                                <div class="menuCarte__price">
+                                    <p class="menuCarte__text menuCarte__text--gras">40€</p>
+                                    <div class="menuCarte__check"><i class="fa-solid fa-circle-check"></i></div>
+                                </div>
+                            </div>
+
+                            <!-- plat 2 -->
+                            <div class="menuCarte menuCarte--5">
+                                <div class="menuCarte__body">
+                                    <p class="menuCarte__text menuCarte__text--gras1">Parmentier de queue de boeuf</p>
+                                    <p class="menuCarte__text">À la truffe noire sur sa purée de panais</p>
+                                </div>
+                                <div class="menuCarte__price">
+                                    <p class="menuCarte__text menuCarte__text--gras">35€</p>
+                                    <div class="menuCarte__check"><i class="fa-solid fa-circle-check"></i></div>
+                                </div>
+                            </div>
+
+                            <!-- plat 3 -->
+                            <div class="menuCarte menuCarte--6">
+                                <div class="menuCarte__body">
+                                    <p class="menuCarte__text menuCarte__text--gras1">Filet de turbot</p>
+                                    <p class="menuCarte__text">Aux agrumes</p>
+                                </div>
+                                <div class="menuCarte__price">
+                                    <p class="menuCarte__text menuCarte__text--gras">44€</p>
+                                    <div class="menuCarte__check"><i class="fa-solid fa-circle-check"></i></div>
+                                </div>
+                            </div>
+                        </div>
 
 
+                        <div class="desserts">
+                            <p class="light"><span>DESS</span>ERTS</p>
+                            <!-- dessert 1 -->
+                            <div class="menuCarte menuCarte--7">
+                                <div class="menuCarte__body">
+                                    <p class="menuCarte__text menuCarte__text--gras1">Paris-Brest</p>
+                                    <p class="menuCarte__text">Revisité</p>
+                                </div>
+                                <div class="menuCarte__price">
+                                    <p class="menuCarte__text menuCarte__text--gras">18€</p>
+                                    <div class="menuCarte__check"><i class="fa-solid fa-circle-check"></i></div>
+                                </div>
+                            </div>
 
+                            <!-- dessert 2 -->
+                            <div class="menuCarte menuCarte--8">
+                                <div class="menuCarte__body">
+                                    <p class="menuCarte__text menuCarte__text--gras1">Macaron au chocolat d'exception
+                                    </p>
+                                    <p class="menuCarte__text">Et glace à la vanille de Madagascar</p>
+                                </div>
+                                <div class="menuCarte__price">
+                                    <p class="menuCarte__text menuCarte__text--gras">22€</p>
+                                    <div class="menuCarte__check"><i class="fa-solid fa-circle-check"></i></div>
+                                </div>
+                            </div>
 
-      <footer>
-        <div class="monfooter">
-        <p class="textefin">ohmyfood</p>
-        <p class="textefin">Proposer un restaurant</p>
-        <p class="textefin">Devenir partenaire</p>
-        <p class="textefin">Mentions légales</p>
-        <p class="textefin">Contact</p>
-        </div>
-      </footer>
- 
+                            <!-- dessert 3 -->
+                            <div class="menuCarte menuCarte--9">
+                                <div class="menuCarte__body">
+                                    <p class="menuCarte__text menuCarte__text--gras1">Mousse au chocolat</p>
+                                    <p class="menuCarte__text">Au piment d'Espelette et à la truffe noire</p>
+                                </div>
+                                <div class="menuCarte__price">
+                                    <p class="menuCarte__text menuCarte__text--gras">23€</p>
+                                    <div class="menuCarte__check"><i class="fa-solid fa-circle-check"></i></div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="commande">
+                    <button class="btn">Commander</button>
+                </div>
+            </section>
+        </main>
+    </div>
+    <footer>
+        <h3>Ohmyfood</h3>
+        <ul>
+            <li>
+                <i class="iconeFoot fa-solid fa-utensils"></i>
+                <a href="#">Proposer un restaurant</a>
+            </li>
+            <li>
+                <i class="iconeFoot fa-solid fa-handshake-angle fa-xs"></i>
+                <a href="#">Devenir partenaire</a>
+            </li>
+            <li>
+                <a href="#">Mentions légales</a>
+            </li>
+            <li>
+                <a class="aFooter" href="mailto:ohmyfood@gmail.com">Contact</a>
+            </li>
+        </ul>
+    </footer>
 </body>
+
 </html>

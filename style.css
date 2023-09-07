@@ -1,149 +1,1058 @@
-*{
-    max-width: 400px;
-    max-height: 2000px;
-    overflow-x: clip;
+@charset "UTF-8";
+/* Keyframes zones début*/
+@keyframes loader {
+  from {
+    visibility: visible;
+  }
+  to {
+    visibility: hidden;
+  }
+}
+@keyframes pulse {
+  from {
+    opacity: 0.5;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes loaderRotate {
+  from {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes translateCard {
+  from {
+    visibility: hidden;
+    transform: translateY(100%);
+  }
+  to {
+    visibility: visible;
+    transform: translateY(0%);
+  }
+}
+@keyframes visibilities {
+  from {
+    opacity: 0;
+  }
+  80% {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes checkRotate {
+  from {
+    transform: rotate(90deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+  /* Keyframes zones fin*/
+
+  /* bouton début */
+}
+.btn {
+  width: 220px;
+  height: 50px;
+  border-radius: 30px;
+  color: white;
+  border: hidden;
+  font-size: 1em;
+  background: linear-gradient(#FF79DA, #9356DC);
+}
+@media screen and (min-width: 1081px) and (max-width: 1500px) {
+  .btn:hover {
+    background: #99E2D0;
+    color: black;
+    animation: pulse 1.5s ease-in-out infinite;
+  }
+}
+@media screen and (min-width: 1501px) and (max-width: 1920px) {
+  .btn:hover {
+    background: #99E2D0;
+    color: black;
+    animation: pulse 1.5s ease-in-out infinite;
+  }
+}
+/* bouton fin */
+
+/* base text and fonts début*/
+@font-face {
+  font-family: "Roboto";
+  src: url("Roboto-Medium.ttf");
+}
+@font-face {
+  font-family: "RobotoLight";
+  src: url("Roboto-Light.ttf");
+}
+@font-face {
+  font-family: "Shrikhand";
+  src: url("Shrikhand-Regular.ttf");
+}
+.robotoStyle {
+  font-family: "Roboto", Verdana, sans-serif;
+  font-weight: bold;
 }
 
-h4{
-     margin-left: 100px;
+h2 {
+  font-family: "Shrikhand", Verdana, sans-serif;
 }
-
-.logoOhmyfood{
-    width: 200px;
-    height: 30px ;
-    margin-left: 80px;
-}
-
-img{
-    width: 300px;
-    height: 150px ;
-}
-
-.localisation{
-    background-color: #d9d4d4;
-    margin-bottom: -20px;
-    height: 50px;
+@media screen and (min-width: 426px) and (max-width: 1080px) {
+  h2 {
     text-align: center;
+  }
 }
 
+h3 {
+  font-family: "Shrikhand", Verdana, sans-serif;
+  font-weight: lighter;
+  padding-left: 5%;
+  padding-top: 20px;
+  padding-bottom: 10px;
+  margin: 0;
+}
+
+body {
+  font-family: "Roboto", Verdana, sans-serif;
+  font-weight: lighter;
+  margin: 0;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+.aFooter {
+  color: white;
+}
+
+a:visited {
+  color: black;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+#présentation {
+  background-color: #f6f6f6;
+}
+
+#fonctionnement {
+  padding: 5% 5% 3% 5%;
+}
+
+#restaurant {
+  padding: 0 5% 15% 5%;
+  background-color: #f6f6f6;
+}
+@media screen and (min-width: 426px) and (max-width: 1080px) {
+  #restaurant {
+    padding: 0 5% 5% 5%;
+  }
+}
+@media screen and (min-width: 1081px) and (max-width: 1500px) {
+  #restaurant {
+    padding: 0 5% 3% 5%;
+  }
+}
+@media screen and (min-width: 1501px) and (max-width: 1920px) {
+  #restaurant {
+    padding: 0 5% 3% 5%;
+  }
+}
+
+.headerImg {
+  font-family: "Shrikhand";
+  font-size: 2em;
+  margin: 0;
+}
+@media screen and (min-width: 426px) and (max-width: 1080px) {
+  .headerImg {
+    font-size: 3.5em;
+  }
+}
+@media screen and (min-width: 1081px) and (max-width: 1500px) {
+  .headerImg {
+    display: none;
+  }
+}
+@media screen and (min-width: 1501px) and (max-width: 1920px) {
+  .headerImg {
+    display: none;
+  }
+}
+
+.txt {
+  text-align: center;
+}
+.txt--gras {
+  margin-bottom: 0;
+  font-size: 1.7em;
+  font-weight: bold;
+}
+.txt--light {
+  font-family: "RobotoLight";
+  font-size: 1em;
+}
+@media screen and (min-width: 426px) and (max-width: 1080px) {
+  .txt--light {
+    margin-top: 1%;
+  }
+}
+@media screen and (min-width: 1081px) and (max-width: 1500px) {
+  .txt--light {
+    margin-top: 3%;
+  }
+}
+@media screen and (min-width: 1501px) and (max-width: 1920px) {
+  .txt--light {
+    margin-top: 3%;
+  }
+}
+@media screen and (min-width: 426px) and (max-width: 1080px) {
+  .txt {
+    text-align: center;
+  }
+}
+@media screen and (min-width: 1081px) and (max-width: 1500px) {
+  .txt {
+    text-align: center;
+  }
+}
+@media screen and (min-width: 1501px) and (max-width: 1920px) {
+  .txt {
+    text-align: center;
+  }
+}
+
+.resto__txt {
+  font-family: "RobotoLight";
+}
+.resto__txt--gras {
+  font-family: "Roboto";
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+.menu__title {
+  font-weight: lighter;
+}
+@media screen and (min-width: 426px) and (max-width: 1080px) {
+  .menu__title {
+    font-size: 2.5em;
+  }
+}
+@media screen and (min-width: 1081px) and (max-width: 1500px) {
+  .menu__title {
+    font-size: 2.5em;
+  }
+}
+@media screen and (min-width: 1501px) and (max-width: 1920px) {
+  .menu__title {
+    font-size: 2.5em;
+  }
+}
+
+.light {
+  font-family: "RobotoLight";
+}
+
+.menuCarte__text {
+  font-family: "RobotoLight";
+  font-size: 0.9em;
+  margin: 0;
+  padding-bottom: 5px;
+  text-overflow: ellipsis;
+}
+.menuCarte__text--gras {
+  font-family: "Roboto";
+  font-weight: bold;
+}
+.menuCarte__text--gras1 {
+  font-family: "Roboto";
+  font-weight: bold;
+  padding-top: 10px;
+  font-size: 1em;
+}
+
+footer {
+  color: white;
+}
+
+footer a {
+  color: white;
+}
+
+body {
+  max-width: 100%;
+}
+/* base text and fonts fin*/
+
+/* index page début*/
+header {
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 5%;
+  margin-bottom: 3%;
+}
+@media screen and (min-width: 1081px) and (max-width: 1500px) {
+  header {
+    padding-top: 2%;
+  }
+}
+@media screen and (min-width: 1501px) and (max-width: 1920px) {
+  header {
+    padding-top: 2%;
+  }
+}
+
+.hiddenArrow {
+  visibility: hidden;
+}
+
+header a {
+  position: absolute;
+  left: 12px;
+  padding-left: 3%;
+}
+@media screen and (min-width: 426px) and (max-width: 1080px) {
+  header a {
+    font-size: 1.5em;
+  }
+}
+@media screen and (min-width: 1081px) and (max-width: 1500px) {
+  header a {
+    display: none;
+  }
+}
+@media screen and (min-width: 1501px) and (max-width: 1920px) {
+  header a {
+    display: none;
+  }
+}
+
+.logo {
+  display: flex;
+  justify-content: flex-start;
+  display: none;
+  padding: 0;
+}
+@media screen and (min-width: 426px) and (max-width: 1080px) {
+  .logo {
+    display: none;
+  }
+}
+@media screen and (min-width: 1081px) and (max-width: 1500px) {
+  .logo {
+    position: static;
+    display: block;
+  }
+}
+@media screen and (min-width: 1501px) and (max-width: 1920px) {
+  .logo {
+    position: static;
+    display: block;
+  }
+}
+
+footer {
+  width: 100%;
+  height: auto;
+  background-color: #353535;
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 5%;
+  padding-bottom: 4%;
+  margin: 0;
+}
+@media screen and (min-width: 426px) and (max-width: 1080px) {
+  ul {
+    display: flex;
+  }
+}
+@media screen and (min-width: 1081px) and (max-width: 1500px) {
+  ul {
+    display: flex;
+  }
+}
+@media screen and (min-width: 1501px) and (max-width: 1920px) {
+  ul {
+    display: flex;
+  }
+}
+
+footer li {
+  padding-top: 3%;
+  padding-right: 3%;
+}
+
+.iconeFoot {
+  padding-right: 8px;
+}
+/* loader animation début*/
+.loader {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(5px);
+  animation: loader 3s forwards;
+}
+.loader__box {
+  position: relative;
+}
+.loader__icones {
+  position: absolute;
+  bottom: 30px;
+  left: 35px;
+  font-size: 5em;
+  background: linear-gradient(#FF79DA, #9356DC);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  animation: pulse 1s ease-in-out forwards infinite;
+}
+.loader__circle {
+  width: 150px;
+  height: 150px;
+  border: solid 10px #9356DC;
+  border-top: solid 10px #99E2D0;
+  border-radius: 75px;
+  animation: loaderRotate 1.5s ease-in-out infinite;
+}
+/* loader animation fin*/
+.search {
+  display: flex;
+  justify-content: center;
+  background-color: #eaeaea;
+  box-shadow: inset 0 3px 3px 0 lightgrey;
+  padding-right: 35px;
+}
 .search__dot {
-  /*margin-top: 15px;
-  padding-right: 3%;*/
-  margin-left: -300px;
+  margin-top: 15px;
+  padding-right: 3%;
+}
+@media screen and (min-width: 426px) and (max-width: 1080px) {
+  .search {
+    padding: 0;
+  }
+}
+@media screen and (min-width: 1081px) and (max-width: 1500px) {
+  .search {
+    width: 30%;
+    margin-left: 35%;
+    padding: 0;
+  }
+}
+@media screen and (min-width: 1501px) and (max-width: 1920px) {
+  .search {
+    width: 30%;
+    margin-left: 35%;
+    padding: 0;
+  }
 }
 
-.texte1{
-    margin-left: 100px;
+.boxPresentation {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 7% 50px 7%;
+}
+@media screen and (min-width: 426px) and (max-width: 1080px) {
+  .boxPresentation {
+    justify-content: space-around;
+  }
 }
 
-.texte2{
-    margin-left: 100px;
-    margin-top: 20px;
+nav {
+  padding-top: 12px;
+}
+@media screen and (min-width: 426px) and (max-width: 1080px) {
+  nav {
+    padding-left: 2.5%;
+  }
+}
+@media screen and (min-width: 1081px) and (max-width: 1500px) {
+  nav {
+    padding-left: 7%;
+  }
+}
+@media screen and (min-width: 1501px) and (max-width: 1920px) {
+  nav {
+    padding-left: 7%;
+  }
 }
 
-.listerestaurants{
-    background-color: gainsboro;
-    height: 250px;
+.etapes {
+  padding-left: 3%;
 }
-
-.etapes{
-    background-color: gainsboro;
-    border-radius: 20px;
-    height: 50px;
+.etapes__etp {
+  display: flex;
+  align-items: center;
+  background-color: #f6f6f6;
+  gap: 20px;
+  height: 65px;
+  margin-bottom: 20px;
+  border-radius: 15px;
+  box-shadow: 0px 5px 10px #eaeaea;
 }
-
-.LesRestaurants{
-    /*display: flex;
-    flex-direction: column;*/
-    height: 1100px;
-    background-color: gainsboro;
+@media screen and (min-width: 426px) and (max-width: 1080px) {
+  .etapes__etp {
+    width: 40%;
+  }
 }
-
-.exemplerestaurant{
+@media screen and (min-width: 1081px) and (max-width: 1500px) {
+  .etapes__etp {
+    width: 20%;
+    margin-right: 4%;
+  }
+}
+@media screen and (min-width: 1501px) and (max-width: 1920px) {
+  .etapes__etp {
+    width: 20%;
+    margin-right: 4%;
+  }
+}
+.etapes__num {
+  width: 22px;
+  height: 22px;
+  background-color: #9356DC;
+  display: flex;
+  justify-content: center;
+  padding-top: 2px;
+  border-radius: 10px;
+  color: white;
+  position: relative;
+  right: 10px;
+}
+.etapes__icone {
+  color: #7e7e7e;
+}
+.etapes__etp:hover {
+  background-color: #f2eafb;
+}
+.etapes__etp:hover .etapes__icone {
+  color: #9356DC;
+}
+@media screen and (min-width: 426px) and (max-width: 1080px) {
+  .etapes {
     display: flex;
     flex-direction: column;
-    margin-left: 50px;
-    margin-top: 30px;
-    background-color: white;
-    height: 225px;
-    width: 300px;
-    border-radius: 15px ;
+    align-items: center;
+  }
 }
-
-.nomduresto{
-    margin-left: 20px;
-}
-
-.nomduplat{
-     margin-left: 20px;
-     margin-top: -5px;
-}
-
-.resto__coeur {
+@media screen and (min-width: 1081px) and (max-width: 1500px) {
+  .etapes {
     display: flex;
-    /*position: absolute;
-    bottom: 25px;
-    right: 20px;*/
-    font-size: 1.6em;
-    margin-top: -50px;
-    margin-left: 270px;
-
+  }
+}
+@media screen and (min-width: 1501px) and (max-width: 1920px) {
+  .etapes {
+    display: flex;
+  }
 }
 
+.robotoStyle--top {
+  padding-top: 50px;
+}
+
+/* restaurant card début */
+.resto {
+  width: 100%;
+}
+.resto .boxResto {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+@media screen and (min-width: 426px) and (max-width: 1080px) {
+  .resto .boxResto {
+    justify-content: center;
+  }
+}
+@media screen and (min-width: 1081px) and (max-width: 1500px) {
+  .resto .boxResto {
+    flex-wrap: nowrap;
+    padding-left: 3%;
+    padding-right: 3%;
+    padding-bottom: 3%;
+  }
+}
+@media screen and (min-width: 1501px) and (max-width: 1920px) {
+  .resto .boxResto {
+    flex-wrap: nowrap;
+    padding-left: 3%;
+    padding-right: 3%;
+    padding-bottom: 3%;
+  }
+}
+.resto__card {
+  width: 100%;
+  height: 220px;
+  overflow: hidden;
+  border-radius: 15px;
+  position: relative;
+  margin: auto;
+  box-shadow: 0px 5px 10px #eaeaea;
+}
+@media screen and (min-width: 426px) and (max-width: 1080px) {
+  .resto__card {
+    width: 40%;
+    margin: 0;
+  }
+}
+@media screen and (min-width: 1081px) and (max-width: 1500px) {
+  .resto__card {
+    width: 20%;
+    margin: 0;
+  }
+}
+@media screen and (min-width: 1501px) and (max-width: 1920px) {
+  .resto__card {
+    width: 23%;
+    margin: 0;
+  }
+}
+.resto__img {
+  width: 100%;
+  height: 200px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  object-fit: cover;
+  background-color: white;
+  margin: -45px 0 0 0;
+}
+.resto__new {
+  background-color: #99E2D0;
+  width: 90px;
+  height: 30px;
+  padding-top: 7px;
+  text-align: center;
+  border-radius: 2px;
+  color: #278870;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+.resto__txt {
+  margin: 0;
+  padding-top: 5px;
+  padding-left: 2%;
+}
+.resto__title {
+  width: 100%;
+  position: absolute;
+  bottom: 0px;
+  background-color: white;
+  padding-bottom: 15px;
+}
+.resto__coeur {
+  display: flex;
+  position: absolute;
+  bottom: 25px;
+  right: 20px;
+  font-size: 1.6em;
+}
+/* animation coeur début*/
 .resto__coeur--plein {
-    opacity: 0;
-    background: linear-gradient(#9356DC, #FF79DA);
-    background-clip: text;
-    -webkit-background-clip: text;
-    color: transparent;
-    transform: skewX(60deg);
-    transition: 0.5s ease-in-out;
+  opacity: 0;
+  background: linear-gradient(#9356DC, #FF79DA);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  transform: skewX(60deg);
+  transition: 0.5s ease-in-out;
 }
-
 .resto__coeur--plein:active {
+  opacity: 1;
+  transform: skewX(0deg);
+}
+@media screen and (min-width: 1081px) and (max-width: 1500px) {
+  .resto__coeur--plein:hover {
     opacity: 1;
     transform: skewX(0deg);
+  }
+}
+@media screen and (min-width: 1501px) and (max-width: 1920px) {
+  .resto__coeur--plein:hover {
+    opacity: 1;
+    transform: skewX(0deg);
+  }
+}
+/* animation coeur fin*/
+/* restaurant card fin */
+/* index page fin*/
+
+/* restaurant page début */
+
+.background {
+  background-color: #f6f6f6;
+  overflow: hidden;
+}
+@media screen and (min-width: 1081px) and (max-width: 1500px) {
+  .background {
+    background-color: white;
+  }
+}
+@media screen and (min-width: 1501px) and (max-width: 1920px) {
+  .background {
+    background-color: white;
+  }
 }
 
-
-.bouttonrestaurants {
-    margin-left: 75px;
-    border: 0;
-    line-height: 2.5;
-    padding: 0 20px;
-    font-size: 1rem;
-    text-align: center;
-    color: #fff;
-    text-shadow: 1px 1px 1px #000;
+.imgFond {
+  width: 100%;
+}
+.imgFond--taille {
+  margin: -81px 0 -92px 0;
+}
+@media screen and (min-width: 426px) and (max-width: 1080px) {
+  .imgFond--taille {
+    height: 700px;
+  }
+}
+@media screen and (min-width: 1081px) and (max-width: 1500px) {
+  .imgFond {
+    width: 30%;
+    float: right;
+    clear: both;
+    margin: 0 3% 0 5%;
     border-radius: 20px;
-    background-color: rgb(194, 0, 220);
-    background-image: linear-gradient(to top left, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) 30%, rgba(0, 0, 0, 0));
-    box-shadow:
-      inset 2px 2px 3px rgba(255, 255, 255, 0.6),
-      inset -2px -2px 3px rgba(0, 0, 0, 0.6);
+    border: solid 5px #99E2D0;
+    padding: 10px;
   }
-  
-  .bouttonrestaurants:hover {
-    background-color: rgb(194, 0, 220);
+  .imgFond--taille {
+    width: 20%;
   }
-  
-  .bouttonrestaurants:active {
-    box-shadow:
-      inset -2px -2px 3px rgba(255, 255, 255, 0.6),
-      inset 2px 2px 3px rgba(0, 0, 0, 0.6);
+}
+@media screen and (min-width: 1501px) and (max-width: 1920px) {
+  .imgFond {
+    width: 30%;
+    float: right;
+    clear: both;
+    margin: 0 3% 0 5%;
+    border-radius: 20px;
+    border: solid 5px #99E2D0;
+    padding: 10px;
   }
-
-
-
-
-  .monfooter{
-    /*margin-top: 300px;*/
-    /*margin-left: 50px;*/
-    margin-top: -16px;
-    background-color: #291f1f;
+  .imgFond--taille {
+    width: 20%;
   }
-
-  .textefin{
-    color: white;
-    margin-left: 30px;
+}
+/* titre restaurant début*/
+.menu {
+  position: relative;
+  bottom: 45px;
+  background-color: #f6f6f6;
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
+  padding: 0 5% 0 5%;
+}
+.menu__head {
+  display: flex;
+  align-items: center;
+}
+@media screen and (min-width: 426px) and (max-width: 1080px) {
+  .menu__head {
+    justify-content: center;
   }
+}
+@media screen and (min-width: 1081px) and (max-width: 1500px) {
+  .menu__head {
+    width: 40%;
+    padding-bottom: 20%;
+  }
+}
+@media screen and (min-width: 1501px) and (max-width: 1920px) {
+  .menu__head {
+    width: 40%;
+    padding-bottom: 20%;
+  }
+}
+.menu__coeur {
+  display: flex;
+  position: absolute;
+  right: 40px;
+  font-size: 1.6em;
+  cursor: pointer;
+}
+
+/* animation coeur début*/
+.menu__coeur--plein {
+  opacity: 0;
+  background: linear-gradient(#9356DC, #FF79DA);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  transform: skewX(60deg);
+  transition: 0.5s ease-in-out;
+}
+.menu__coeur--plein:hover {
+  opacity: 1;
+  transform: skewX(0deg);
+}
+/* animation coeur fin*/
+@media screen and (min-width: 426px) and (max-width: 1080px) {
+  .menu__coeur {
+    right: 10%;
+  }
+}
+@media screen and (min-width: 1081px) and (max-width: 1500px) {
+  .menu__coeur {
+    right: 60%;
+  }
+}
+@media screen and (min-width: 1501px) and (max-width: 1920px) {
+  .menu__coeur {
+    right: 70%;
+  }
+}
+@media screen and (min-width: 1081px) and (max-width: 1500px) {
+  .menu {
+    background-color: white;
+    position: static;
+  }
+}
+@media screen and (min-width: 1501px) and (max-width: 1920px) {
+  .menu {
+    background-color: white;
+    position: static;
+  }
+}
+/* titre restaurant fin*/
+
+/* Menu restaurant début*/
+.boxMenu {
+  display: flex;
+  flex-wrap: wrap;
+}
+@media screen and (min-width: 1081px) and (max-width: 1500px) {
+  .boxMenu {
+    gap: 40px;
+    height: 300px;
+    justify-content: space-around;
+  }
+}
+@media screen and (min-width: 1501px) and (max-width: 1920px) {
+  .boxMenu {
+    gap: 40px;
+    height: 300px;
+    justify-content: space-around;
+  }
+}
+
+span {
+  text-decoration: underline #99E2D0 3px;
+  text-underline-offset: 7px;
+}
+
+.entrees {
+  width: 95%;
+}
+@media screen and (min-width: 1081px) and (max-width: 1500px) {
+  .entrees {
+    width: 30%;
+    background-color: #eaeaea;
+    border-radius: 20px;
+    padding: 0 2% 0 2%;
+  }
+}
+@media screen and (min-width: 1501px) and (max-width: 1920px) {
+  .entrees {
+    width: 30%;
+    background-color: #eaeaea;
+    border-radius: 20px;
+    padding: 0 2% 0 2%;
+  }
+}
+
+.plats {
+  width: 95%;
+  animation: visibilities 1.5s ease-in-out forwards;
+}
+@media screen and (min-width: 1081px) and (max-width: 1500px) {
+  .plats {
+    width: 30%;
+    background-color: #eaeaea;
+    border-radius: 20px;
+    padding: 0 2% 0 2%;
+  }
+}
+@media screen and (min-width: 1501px) and (max-width: 1920px) {
+  .plats {
+    width: 30%;
+    background-color: #eaeaea;
+    border-radius: 20px;
+    padding: 0 2% 0 2%;
+  }
+}
+
+.desserts {
+  width: 95%;
+  animation: visibilities 1s 1.3s ease-in-out both;
+}
+@media screen and (min-width: 1081px) and (max-width: 1500px) {
+  .desserts {
+    width: 30%;
+    background-color: #eaeaea;
+    border-radius: 20px;
+    padding: 0 2% 0 2%;
+  }
+}
+@media screen and (min-width: 1501px) and (max-width: 1920px) {
+  .desserts {
+    width: 30%;
+    background-color: #eaeaea;
+    border-radius: 20px;
+    padding: 0 2% 0 2%;
+  }
+}
+
+.menuCarte {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 20px;
+  border-radius: 15px;
+  margin-bottom: 15px;
+  animation: translateCard 1s forwards;
+}
+/* animation transition menu début */
+.menuCarte--1 {
+  visibility: hidden;
+  animation-delay: 0.3s;
+}
+.menuCarte--2 {
+  visibility: hidden;
+  animation-delay: 0.6s;
+}
+.menuCarte--3 {
+  visibility: hidden;
+  animation-delay: 0.9s;
+}
+.menuCarte--4 {
+  visibility: hidden;
+  animation-delay: 1.2s;
+}
+.menuCarte--5 {
+  visibility: hidden;
+  animation-delay: 1.5s;
+}
+.menuCarte--6 {
+  visibility: hidden;
+  animation-delay: 1.8s;
+}
+.menuCarte--7 {
+  visibility: hidden;
+  animation-delay: 2.1s;
+}
+.menuCarte--8 {
+  visibility: hidden;
+  animation-delay: 2.4s;
+}
+.menuCarte--9 {
+  visibility: hidden;
+  animation-delay: 2.7s;
+}
+.menuCarte--10 {
+  visibility: hidden;
+  animation-delay: 3s;
+}
+/* animation transition menu fin */
+
+.menuCarte__body {
+  width: 80%;
+  padding-left: 12px;
+  line-height: 17px;
+  cursor: pointer;
+  transition: width 1s ease-in-out;
+}
+.menuCarte__body p {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.menuCarte:hover .menuCarte__body {
+  width: 66%;
+}
+.menuCarte__price {
+  max-width: 30%;
+  height: 100%;
+  display: flex;
+  cursor: pointer;
+}
+.menuCarte__text--gras {
+  padding-top: 35px;
+  padding-right: 20px;
+}
+/*animation check début*/
+.menuCarte__check {
+  height: 100%;
+  width: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: transparent;
+  background-color: #99E2D0;
+  border-radius: 0 15px 15px 0;
+  transition: width 1s ease-in-out;
+}
+.menuCarte:hover .menuCarte__check {
+  width: 60px;
+  color: white;
+}
+.menuCarte:hover i {
+  transform: rotate(90deg);
+  animation: checkRotate 0.5s 0.5s forwards;
+}
+/*animation check fin*/
+/* Menu restaurant fin*/
+
+.commande {
+  background-color: #f6f6f6;
+  position: relative;
+  bottom: 20px;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 40px;
+}
+@media screen and (min-width: 1081px) and (max-width: 1500px) {
+  .commande {
+    width: 20%;
+    background-color: white;
+    bottom: 500px;
+    left: 444px;
+  }
+}
+@media screen and (min-width: 1501px) and (max-width: 1920px) {
+  .commande {
+    width: 20%;
+    background-color: white;
+    bottom: 500px;
+    left: 444px;
+  }
+}
+/* page restaurant fin*/
+/*# sourceMappingURL=main.css.map */
